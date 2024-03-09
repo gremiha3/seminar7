@@ -10,25 +10,25 @@ void ListNumbers(int M, int N)
 {
     if (M == N)
     {
-        Console.Write($"{N}, ");
+        if (N >= 0) Console.Write($"{N}, ");
         return;
     }
     if (M < N)
     {
         ListNumbers(M, N - 1);
-        Console.Write($"{N}, ");
+        if (N >= 0) Console.Write($"{N}, ");
     }
     if (M > N)
     {
         ListNumbers(M - 1, N);
-        Console.Write($"{M}, ");
+        if (N >= 0) Console.Write($"{M}, ");
     }
 }
 
 
-Console.WriteLine("Введите натуральное число M:");
+Console.WriteLine("Введите число M:");
 int M = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите натуральное число N:");
+Console.WriteLine("Введите число N:");
 int N = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine();
 
